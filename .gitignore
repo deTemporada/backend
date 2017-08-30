@@ -1,0 +1,7 @@
+.git
+env
+flush.sh
+__pycache__
+migrations
+*.sqlite3
+detemporada/media
