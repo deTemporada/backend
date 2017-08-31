@@ -28,7 +28,7 @@ SECRET_KEY = 'h2wj=*-1*$op3@+u0n11@2j1jo3020^(du)hlk71zepznzu22j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['detemporada.cat']
 
 
 # Application definition
