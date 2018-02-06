@@ -89,4 +89,13 @@ class SearchRecipeByIngredientsView(generics.ListAPIView):
 
         return qs[:10]
 
+class SearchRecipeByNameView(generics.ListAPIView):
+    serializer_class = RecipeSerializer
 
+    def get_queryset(self):
+        qs = Recipe.objects.all()
+        q = self.request.query_params.get('q', None)
+        lookup_regex = r'(%s)' % q
+        if q is not None and len(q) > 2:
+            qs = qs.filter(name__iregex=lookup_regex)
+            return qs[:10]
