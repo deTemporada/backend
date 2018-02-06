@@ -48,7 +48,8 @@ THIRD_PARTY_APPS = [
     'mptt',
     'django_extensions',
     'taggit',
-    'taggit_serializer'
+    'taggit_serializer',
+    'corsheaders'
 ]
 
 LOCAL_APPS = [
@@ -66,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'detemporada.urls'
@@ -147,3 +149,6 @@ STATIC_URL = '/static/'
 
 # Filer and easy_thumbnail settings
 FILER_CANONICAL_URL = 's/'
+
+#CORS Configuration
+CORS_ORIGIN_ALLOW_ALL = True
